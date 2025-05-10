@@ -1,0 +1,7 @@
+pkg update && pkg upgrade
+pkg install curl
+pkg install python3
+pkg install git
+git clone https://github.com/MrSanZz/C2 cd C2
+pip3 install -r requirements.txt
+python3 c2.py
