@@ -1,0 +1,23 @@
+apt update
+apt install x11-repo
+apt install -y lxqt tigervnc-standalone-server dbus-x11 openbox nodejs git curl
+git clone https://github.com/novnc/noVNC.git
+vncpasswd
+vncserver :1
+vncserver -kill :1
+cat > ~/.vnc/xstartup <<'EOF'
+#!/data/data/com.termux/files/usr/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export XKL_XMODMAP_DISABLE=1
+export DISPLAY=:1
+exec startlxqt
+EOF
+chmod +x ~/.vnc/xstartup
+cat > run_vnc.sh << 'EOF'
+vncserver :1
+./utils/novnc_proxy --listen 6080 --vnc localhost:5901 &
+ssh -R 0:localhost:6080 localhost.run
+EOF
+chmod +x run_vnc.sh
+./run_vnc.sh
