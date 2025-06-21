@@ -17,7 +17,7 @@ chmod +x ~/.vnc/xstartup
 cat > run_vnc.sh << 'EOF'
 vncserver :1
 cd noVNC
-./novnc_proxy --listen 6080 --vnc localhost:5901 &
+./utils/novnc_proxy --listen 6080 --vnc localhost:5901 &
 ssh -R 0:localhost:6080 localhost.run
 cd
 EOF
