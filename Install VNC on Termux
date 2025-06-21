@@ -18,7 +18,6 @@ cat > run_vnc.sh << 'EOF'
 vncserver :1
 cd noVNC
 ./utils/novnc_proxy --listen 6080 --vnc localhost:5901 &
-ssh -R 80:localhost:6080 localhost.run
 cd
 EOF
 chmod +x run_vnc.sh
