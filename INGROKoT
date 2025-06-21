@@ -1,7 +1,0 @@
-pkg update && pkg upgrade -y
-pkg install curl tar
-curl -o ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-arm64.tgz
-tar -xzf ngrok.tgz
-chmod +x ngrok
-mv ngrok $PREFIX/bin/
-echo "Run 'ngrok config add-authtoken [YOUR_AUTH_TOKEN]'"
