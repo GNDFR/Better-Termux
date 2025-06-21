@@ -1,6 +1,6 @@
-apt update
-apt install x11-repo
-apt install -y lxqt tigervnc-standalone-server dbus-x11 openbox nodejs git curl
+pkg update
+pkg install x11-repo
+pkg install -y lxqt tigervnc dbus-x11 openbox nodejs git curl
 git clone https://github.com/novnc/noVNC.git
 vncpasswd
 vncserver :1
