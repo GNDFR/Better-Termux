@@ -1,5 +1,0 @@
-pkg update
-pkg upgrade -y
-pkg install openssh -y
-passwd
-echo Run the 'sshd' command to start the SSH server.
