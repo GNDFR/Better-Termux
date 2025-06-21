@@ -1,6 +1,6 @@
 pkg update
 pkg install x11-repo
-pkg install -y lxqt tigervnc dbus openbox nodejs git curl
+pkg install -y lxqt tigervnc dbus openbox nodejs git curl firefox
 git clone https://github.com/novnc/noVNC.git
 vncpasswd
 vncserver :1
