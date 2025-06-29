@@ -9,6 +9,6 @@ eval "$(curl 'https://raw.githubusercontent.com/GNDFR/Better-Termux/refs/heads/m
 ```
 
 [Install Gemini on Termux]
-```shell
+```bash
 eval "$(curl 'https://raw.githubusercontent.com/GNDFR/Better-Termux/refs/heads/main/Install%20Gemini%20on%20Termux')"
 ```
